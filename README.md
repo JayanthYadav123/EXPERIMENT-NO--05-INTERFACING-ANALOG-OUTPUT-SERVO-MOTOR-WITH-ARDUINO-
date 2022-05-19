@@ -1,7 +1,7 @@
-# EXPERIMENT NO 05 INTERFACING ANALOG OUTPUT SERVO MOTOR WITH ARDUINO
-
+# EXPERIMENT NO 05 
+Interfacing analog output with arduino and servo motor.
 ### AIM
-To interface an Analog output (servo motor) and modify the angular displacement of the servo using PWM signal .
+To interface an Analog output with arduino and servo motor.
 COMPONENTS REQUIRED:
 1.	Servo motor of choice (9v is preferred )
 2.	1 KΩ resistor 
@@ -27,15 +27,9 @@ Servo motors are used for angular positioning, such as in radio control airplane
 #### Figure-01 SERVO MOTOR SPLIT VIEW 
 Control 
 An external controller (such as the Arduino) tells the servo where to go with a signal know as pulse proportional modulation (PPM) or pulse code modulation (which is often confused with pulse width modulation, PWM). PWM uses 1 to 2ms out of a 20ms time period to encode its information.
- 
- 
  ![image](https://user-images.githubusercontent.com/36288975/163544482-3027136f-7135-4f3d-a23f-8dc2fe04194d.png)
-
 ### Figure-02 SERVO MOTOR PINS
-
  ![image](https://user-images.githubusercontent.com/36288975/163544513-ca497421-e6ba-4f91-871f-5cfba77f22a8.png)
-
-
 ### Figure-03 SERVO MOTOR OVERVIEW 
 
  
@@ -67,15 +61,28 @@ CIRCUIT DIAGRAM
 
 
 ### PROGRAM :
- 
+ #include<Servo.h>
+Servo s1;
+void setup()
+{
+  s1.attach(9);
+}
 
-
-
-
-
-
-
-
+void loop()
+{
+  for (int i=0;i<=100;i+=1)
+  {s1.write(120);
+   delay(25);
+  }
+  
+   for (int i=180; i>=0;i-=1)
+   {s1.write(i);
+   delay(25);
+  }
+}
+ ~~~
+ Output:
+ <img width="652" alt="Screenshot 2022-05-19 175931" src="https://user-images.githubusercontent.com/94836154/169293479-c81f54d8-ab2e-483e-8eb7-b6e583b760a3.png">
 
 ### RESULTS: 
 Arduino uno interfacing with servo motor is learned and angular position is controlled using PWM signal.
