@@ -1,6 +1,6 @@
-# EXPERIMENT NO 05 
+# EXPERIMENT NO 05
 Interfacing analog output with arduino and servo motor.
-### AIM
+### AIM:
 To interface an Analog output with arduino and servo motor.
 COMPONENTS REQUIRED:
 1.	Servo motor of choice (9v is preferred )
@@ -11,7 +11,7 @@ COMPONENTS REQUIRED:
 6.	Servo rated power supply (dc source )
 
 
-### THEORY
+### THEORY:
 Servo motors and are constructed out of basic DC motors, by adding:
 •	 gear reduction
 •	 a position sensor for the motor shaft
